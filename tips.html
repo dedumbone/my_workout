@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tips</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+
+    <style>
+        body { background-color: black; color: white; font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { text-transform: uppercase; margin-bottom: 10px; }
+        .tip-container { width: 80%; margin: auto; text-align: left; }
+        .tip-box { 
+            border: 2px solid white; 
+            padding: 15px; 
+            margin: 20px 0; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            position: relative;
+        }
+        .tip-title { font-size: 1.2em; font-weight: bold; }
+        .tip-content { display: none; margin-top: 10px; font-size: 0.95em; }
+        .toggle-icon { position: absolute; right: 15px; font-size: 1.2em; transition: transform 0.3s ease; }
+        .expanded .toggle-icon { transform: rotate(180deg); }
+        .back-btn { display: inline-block; margin-top: 20px; padding: 10px 20px; border: 2px solid white; color: white; text-decoration: none; border-radius: 5px; }
+        .back-btn:hover { background-color: white; color: black; }
+    </style>
+</head>
+<body>
+    <h1>Workout Tips</h1>
+    
+    <div class="tip-container">
+        <div class="tip-box" onclick="toggleTip(this)">
+            <span class="tip-title">🔥 Maximize Gains</span> <i class="fas fa-chevron-down toggle-icon"></i>
+            <p class="tip-content">1. Focus on **progressive overload** – increase weights or reps each session.</p>
+            <p class="tip-content">2. Prioritize **compound movements** like squats, deadlifts, and pull-ups.</p>
+            <p class="tip-content">3. Maintain **proper form** to avoid injury and activate muscles efficiently.</p>
+            <p class="tip-content">4. Use **time under tension** by slowing down your reps for better muscle growth.</p>
+            <p class="tip-content">5. Track your **workouts and progress** to ensure consistent improvement.</p>
+        </div>
+
+        <div class="tip-box" onclick="toggleTip(this)">
+         <span class="tip-title">🔥 Science-Backed Weight Loss Tips</span> <i class="fas fa-chevron-down toggle-icon"></i>
+         <p class="tip-content">1. **500-700 kcal deficit** per day = ~0.5 kg (1 lb) fat loss per week.</p>
+         <p class="tip-content">2. **1.6-2.2g of protein per kg** of body weight helps retain muscle.</p>
+         <p class="tip-content">3. **10,000+ steps/day** increases calorie burn and supports fat loss.</p>
+         <p class="tip-content">4. **7-9 hours of sleep** improves fat loss and reduces cravings.</p>
+         <p class="tip-content">5. **3-5 sessions of strength training** per week prevents muscle loss.</p>
+     </div>
+     
+
+        <div class="tip-box" onclick="toggleTip(this)">
+            <span class="tip-title">⚡ Explosive Strength</span> <i class="fas fa-chevron-down toggle-icon"></i>
+            <p class="tip-content">1. Include **plyometric exercises** like box jumps and clapping push-ups.</p>
+            <p class="tip-content">2. Train with **lower reps (3-6) at higher intensity** to develop power.</p>
+            <p class="tip-content">3. Sprint **once or twice a week** to improve fast-twitch muscle fibers.</p>
+            <p class="tip-content">4. Use **speed training** – lift explosively and control the negative.</p>
+            <p class="tip-content">5. Do **contrast training** (e.g., heavy squats + jump squats).</p>
+        </div>
+
+        <div class="tip-box" onclick="toggleTip(this)">
+            <span class="tip-title">🍽️ Nutrition Matters</span> <i class="fas fa-chevron-down toggle-icon"></i>
+            <p class="tip-content">1. Eat **1.6-2.2g protein per kg** of body weight daily.</p>
+            <p class="tip-content">2. **Pre-workout carbs** give energy, **post-workout protein** helps recovery.</p>
+            <p class="tip-content">3. **Hydrate properly** – dehydration reduces performance.</p>
+            <p class="tip-content">4. Include **healthy fats** for hormone balance (avocados, nuts, olive oil).</p>
+            <p class="tip-content">5. Avoid **processed foods**—focus on whole, nutrient-dense meals.</p>
+        </div>
+
+        <div class="tip-box" onclick="toggleTip(this)">
+            <span class="tip-title">🛌 Recovery & Sleep</span> <i class="fas fa-chevron-down toggle-icon"></i>
+            <p class="tip-content">1. Get **7-9 hours of quality sleep** for optimal recovery.</p>
+            <p class="tip-content">2. Use **active recovery** (light stretching, walking) on rest days.</p>
+            <p class="tip-content">3. Take **rest days seriously** – muscles grow during recovery, not training.</p>
+            <p class="tip-content">4. Use **foam rolling and mobility work** to reduce soreness.</p>
+            <p class="tip-content">5. Limit **caffeine intake before bed** to avoid sleep disruption.</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">Back</a>
+
+    <script>
+        function toggleTip(element) {
+            element.classList.toggle("expanded");
+            let content = element.querySelectorAll(".tip-content");
+            let icon = element.querySelector(".toggle-icon");
+
+            content.forEach(p => {
+                if (p.style.display === "block") {
+                    p.style.display = "none";
+                } else {
+                    p.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

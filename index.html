@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Web Design Practice</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+         background-color: black;
+         color: white;
+         font-family: Arial, sans-serif;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh; 
+      }
+
+      nav {
+         position: absolute;
+         top: 10px;
+         left: 10px;
+         right: 10px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .nav-left {
+         display: flex;
+         gap: 25px;
+      }
+
+      .icon {
+         color: white;
+         font-size: 24px;
+         text-decoration: none;
+      }
+
+      .icon:hover {
+         color: gray;
+      }
+
+      h1 {
+         margin-top: 20px;
+      }
+
+      .start-button {
+         color: white;
+         font-size: 1.5em;
+         text-decoration: none;
+         padding: 10px 20px;
+         display: inline-block;
+         border: 2px solid white;
+         border-radius: 25px;
+         transition: all 0.3s ease;
+         margin-top: 20px; /* Moves button down */
+      }
+
+      .start-button:hover {
+         background-color: white;
+         color: black;
+      }
+   </style>
+</head>
+<body>
+   <nav>
+      <div class="nav-left">
+         <a href="index.html" class="icon"><i class="fas fa-home"></i></a>
+         <a href="plan.html" class="icon"><i class="fas fa-dumbbell"></i></a>
+         <a href="bodypart.html" class="icon"><i class="fas fa-bolt"></i></a>
+      </div>
+      <a id="tip" href="tips.html" class="icon"><i class="fas fa-lightbulb"></i></a>
+   </nav>
+
+   <h1>Welcome to Workout Hub</h1>
+   <main>
+      <a href="plan.html" class="start-button">Start</a>
+   </main>
+</body>
+</html>

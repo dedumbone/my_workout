@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Part Workouts</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <style>
+         body {
+         margin: 0;
+         padding: 0;
+         background-color: black;
+         color: white;
+         font-family: Arial, sans-serif;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh; 
+      }
+
+      nav {
+         position: absolute;
+         top: 10px;
+         left: 10px;
+         right: 10px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .nav-left {
+         display: flex;
+         gap: 25px;
+      }
+
+      .icon {
+         color: white;
+         font-size: 24px;
+         text-decoration: none;
+      }
+
+      .icon:hover {
+         color: gray;
+      }
+        h1 {
+            margin-top: 50px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            margin: 15px 0;
+        }
+        li a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        li a:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+           <a href="index.html" class="icon"><i class="fas fa-home"></i></a>
+           <a href="plan.html" class="icon"><i class="fas fa-dumbbell"></i></a>
+           <a href="bodypart.html" class="icon"><i class="fas fa-bolt"></i></a>
+        </div>
+        <a id="tip" href="tips.html" class="icon"><i class="fas fa-lightbulb"></i></a>
+     </nav>
+    <header>
+        <h1>Select a Body Part</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li><a href="body_part/chest.html">Chest</a></li>
+            <li><a href="body_part/legs.html">Legs</a></li>
+            <li><a href="body_part/core.html">Core</a></li>
+            <li><a href="body_part/shoulder.html">Shoulders</a></li>
+            <li><a href="body_part/trap.html">Traps</a></li>
+            <li><a href="body_part/triceps.html">Triceps</a></li>
+            <li><a href="body_part/back.html">Back</a></li>
+
+        </ul>
+    </main>
+</body>
+</html>
